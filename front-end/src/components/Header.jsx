@@ -1,19 +1,23 @@
 import React from "react";
 import Bruna from "./imgs/Bruna.png";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     // cabecalho completo
-    <div className=" shadow-md bg-white rounded-md">
+    <header className=" shadow-md bg-white rounded-md">
       {/* Div contem - foto, pesquisa, sobre, perfil */}
-      <div className="flex items-center justify-between px-6 py-2 max-w-7xl mx-auto">
-        <div className="flex items-center">
+      <div className="flex items-center justify-between px-4 py-2 max-w-7xl mx-auto sm:px-6">
+        <Link to="/" className="flex items-center">
           <img src={Bruna} className="h-20" alt="Foto de Bruna" />
-        </div>
+        </Link>
         {/* Div pesquisar */}
-        <div className="flex items-center gap-6 border border-gray-400 pr-4 pl-6 py-2 rounded-full">
+        <Link
+          to="/"
+          className="hidden lg:flex items-center gap-6 border border-gray-400 pr-4 pl-6 py-2 rounded-full"
+        >
           <p className="text-gray-500 font-light opacity-65">Pesquisar</p>
           {/* Icone */}
-          <div className="bg-primary-400 rounded-full p-2 text-white">
+          <div className=" bg-primary-400 rounded-full p-2 text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -30,10 +34,13 @@ const Header = () => {
             </svg>
           </div>
           {/* Fecha icone */}
-        </div>
+        </Link>
         {/* Fim Div pesquisar */}
         {/* Div perfil */}
-        <div className="flex items-center gap-6 border border-gray-400 pr-4 pl-3 py-2 rounded-full">
+        <Link
+          to="/login"
+          className="flex items-center gap-6 border border-gray-400 pr-4 pl-3 py-2 rounded-full"
+        >
           {/* Icone */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -61,12 +68,14 @@ const Header = () => {
             />
           </svg>
           {/* Fecha icone */}
-          <p className="text-gray-800 font-medium">Perfil</p>
-        </div>
+          <p className="sm:max-w-32 max-w-20 truncate text-gray-800 font-medium">
+            Otavio Cezar
+          </p>
+        </Link>
         {/* FIM Div perfil */}
       </div>
       {/* fecha Div */}
-    </div>
+    </header>
   );
 };
 
