@@ -2,4 +2,7 @@
 
 @theme {
   --color-primary-400: #fe5000;
+  --font-bruna:
+    Airbnb Cereal VF, Cirular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif;
 }
